@@ -18,11 +18,11 @@
         <div class="col-6">
             <h2 class="text-center">Agregar</h2>
             <hr>
-            <form >
-                <input class="form-control" type="text" placeholder="Nombre" >
-                <input class="form-control" type="number" placeholder="Poder" >
+            <form (ngSubmit)="agregar()">
+                <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="nuevo.nombre" name="nombre"> <!--[()]=escuchar como emitir el evento  [value]="nuevo.nombre" (input)="cambiarNombre( $event )"-->
+                <input class="form-control" type="number" placeholder="Poder" [(ngModel)]="nuevo.poder" name="poder">
 
-                <button type="button" class="btn btn-primary">Agregar</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
 
             </form>
         </div>
